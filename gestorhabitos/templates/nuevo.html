@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block title%}Nuevo hábito{%endblock%}
+{%block content%}
+
+<h2>Añadir nuevo hábito</h2>
+<!--Formulario para añadir un nuevo hábito-->
+<form method="POST">
+<div class="mb-3">
+<label for="nombre_habito">Nombre del hábito</label>
+<input type="text" name="nombre_habito" class="form-control" required>
+</div>
+<button type="submit" class="btn btn-sucess">Guardar hábito</button>
+<a href="/" class="btn btn-secondary">Volver</a>
+</form>
+
+<!--Mensaje Alerta-->
+{% if mensaje %}
+<div class="alert alert-info mt-3">{{mensaje}}</div>
+{%endif%}
+{%endblock%}

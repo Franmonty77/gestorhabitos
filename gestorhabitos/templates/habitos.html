@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Lista de Hábitos{% endblock %}
+
+{% block content %}
+<h2>Lista de hábitos guardados</h2>
+<a href="/nuevo" class="btn btn-primary mb-3">Añadir hábito</a>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for habito in habitos %}
+        <tr>
+            <td>{{ habito[0] }}</td>
+            <td>{{ habito[1] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
